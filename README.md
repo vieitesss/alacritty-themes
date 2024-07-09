@@ -60,7 +60,7 @@ cursor = '#F4DBD6' # rosewater
 
 - You must have [fzf](https://github.com/junegunn/fzf.git) installed. Just follow its installation instructions.
 
-- Install the requirements.
+- Install the requirements. May need root permission.
 
 ```shell
 pip install -r requirements.txt
@@ -79,7 +79,7 @@ I have pushed an [image to Docker Hub](https://hub.docker.com/r/vieitesss/alacri
 You can try it running the following command:
 
 ```shell
-docker --rm -it -v $HOME/.config/alacritty:/app/alacritty vieitesss/alacritty-themes
+docker run --rm -it -v $HOME/.config/alacritty:/app/alacritty vieitesss/alacritty-themes
 ```
 
 It should download the image and run the script if you have everything well set up.
@@ -88,7 +88,7 @@ You can create a function in any sourced file or in your `.bashrc`/`.zshrc` with
 
 ```bash
 alacritty-themes() {
-    docker --rm -it -v $HOME/.config/alacritty:/app/alacritty vieitesss/alacritty-themes
+    docker run --rm -it -v $HOME/.config/alacritty:/app/alacritty vieitesss/alacritty-themes
 }
 ```
 
